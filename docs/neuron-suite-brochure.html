@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neuron Suite — AI Microtools Brochure</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #0c0c10;
+        --mist: #e8e6f2;
+        --violet: #7c3aed;
+        --cyan: #06b6d4;
+        --rose: #f43f5e;
+        --lime: #84cc16;
+        --card: rgba(255, 255, 255, 0.06);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: "DM Sans", system-ui, sans-serif;
+        background: radial-gradient(1200px 800px at 10% -10%, #312e81 0%, transparent 55%),
+          radial-gradient(900px 600px at 90% 10%, #0e7490 0%, transparent 50%),
+          var(--ink);
+        color: var(--mist);
+        min-height: 100vh;
+      }
+      .wrap {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+      .hero {
+        text-align: center;
+        padding: 56px 24px 72px;
+        border-radius: 32px;
+        background: linear-gradient(145deg, rgba(124, 58, 237, 0.35), rgba(6, 182, 212, 0.2));
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        box-shadow: 0 40px 120px rgba(0, 0, 0, 0.45);
+      }
+      .hero h1 {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: clamp(2.4rem, 5vw, 3.6rem);
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        margin: 0 0 12px;
+      }
+      .hero .tag {
+        display: inline-block;
+        font-size: 0.75rem;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: rgba(232, 230, 242, 0.75);
+        margin-bottom: 20px;
+      }
+      .hero p.lead {
+        max-width: 640px;
+        margin: 0 auto;
+        font-size: 1.15rem;
+        line-height: 1.65;
+        color: rgba(232, 230, 242, 0.88);
+      }
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 28px;
+      }
+      .pill {
+        font-size: 0.78rem;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.25);
+      }
+      h2 {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-weight: 400;
+        font-size: 2rem;
+        margin: 56px 0 8px;
+      }
+      .sub {
+        color: rgba(232, 230, 242, 0.65);
+        margin-bottom: 28px;
+        max-width: 720px;
+      }
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      }
+      .card {
+        border-radius: 20px;
+        padding: 20px 20px 18px;
+        background: var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        transition: transform 0.2s ease, border-color 0.2s;
+      }
+      .card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(255, 255, 255, 0.22);
+      }
+      .card h3 {
+        margin: 0 0 8px;
+        font-size: 1.05rem;
+        letter-spacing: -0.01em;
+      }
+      .card p {
+        margin: 0;
+        font-size: 0.88rem;
+        line-height: 1.55;
+        color: rgba(232, 230, 242, 0.72);
+      }
+      .card .what {
+        margin-bottom: 10px;
+      }
+      .card .label {
+        margin: 10px 0 4px;
+        font-size: 0.65rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: rgba(232, 230, 242, 0.5);
+      }
+      .card ul {
+        margin: 0 0 0 1rem;
+        padding: 0;
+        font-size: 0.78rem;
+        line-height: 1.45;
+        color: rgba(232, 230, 242, 0.78);
+      }
+      .accent {
+        width: 40px;
+        height: 4px;
+        border-radius: 999px;
+        margin-bottom: 12px;
+      }
+      .a1 {
+        background: linear-gradient(90deg, #a78bfa, #f472b6);
+      }
+      .a2 {
+        background: linear-gradient(90deg, #34d399, #14b8a6);
+      }
+      .a3 {
+        background: linear-gradient(90deg, #fbbf24, #f97316);
+      }
+      .a4 {
+        background: linear-gradient(90deg, #22d3ee, #3b82f6);
+      }
+      .slides {
+        margin-top: 64px;
+      }
+      .slide {
+        border-radius: 24px;
+        padding: 36px 32px;
+        margin-bottom: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: linear-gradient(120deg, rgba(15, 23, 42, 0.95), rgba(30, 27, 75, 0.9));
+      }
+      .slide h3 {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-size: 1.75rem;
+        font-weight: 400;
+        margin: 0 0 10px;
+      }
+      .slide .hook {
+        font-size: 1rem;
+        color: rgba(232, 230, 242, 0.8);
+        margin-bottom: 16px;
+      }
+      .slide ul {
+        margin: 0;
+        padding-left: 1.1rem;
+        color: rgba(232, 230, 242, 0.75);
+        font-size: 0.92rem;
+        line-height: 1.55;
+      }
+      .export {
+        margin-top: 48px;
+        padding: 24px;
+        border-radius: 16px;
+        background: rgba(0, 0, 0, 0.35);
+        border: 1px dashed rgba(255, 255, 255, 0.2);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: rgba(232, 230, 242, 0.8);
+      }
+      .export strong {
+        color: #fff;
+      }
+      @media print {
+        body {
+          background: #fff;
+          color: #111;
+        }
+        .hero,
+        .card,
+        .slide {
+          break-inside: avoid;
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="hero">
+        <div class="tag">Neuron suite</div>
+        <h1>Nineteen opinionated AI microtools — each its own repo</h1>
+        <p class="lead">
+          Next.js 16, React 19, Tailwind v4, OpenAI JSON mode. You bring the API key; nothing is stored on
+          our servers except what you deploy yourself. Each repo is one sharp job—prompts, meetings, docs,
+          code, brand, data, and customer voice—so teams can ship internal AI tools without generic chat
+          wrappers.
+        </p>
+        <div class="pill-row">
+          <span class="pill">BYOK OpenAI</span>
+          <span class="pill">No Streamlit</span>
+          <span class="pill">Production build ready</span>
+          <span class="pill">GitHub: mahan0227</span>
+        </div>
+      </section>
+
+      <h2>Tool grid</h2>
+      <p class="sub">
+        Each card summarizes <strong>what</strong> the tool is, <strong>why</strong> teams reach for it, and
+        <strong>where</strong> it usually lives (roles and workflows). Crop cards for Instagram; print to PDF
+        for LinkedIn leave-behinds.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <div class="accent a1"></div>
+          <h3>Neuron Prompt Forge</h3>
+          <p class="what">Single-feature app: goal → structured prompt pack JSON (primary, variants, checklist, risks, system hint).</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Aligns PM + eng on “done” for a prompt before shipping to code.</li>
+            <li>Surfaces failure modes early for bots, RAG, and internal copilots.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Product, support automation, eval prep, agency workshops.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a2"></div>
+          <h3>Echo Meeting Mind</h3>
+          <p class="what">Transcript → fast operational minutes JSON: decisions, owners, risks, parking lot.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Turns messy calls into trackers without a full-time note taker.</li>
+            <li>Separates real decisions from discussion noise.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Eng managers, startups, sales QBRs, remote standups.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a2"></div>
+          <h3>Scribe Meeting Mind</h3>
+          <p class="what">Same transcript input, richer output: board-style narrative, dissent-aware decisions, mitigations, next agenda.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Produces governance-grade artifacts for execs and committees.</li>
+            <li>Preserves why a decision happened—not just bullet titles.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Boards, incident command, program steering, audit-heavy orgs.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a4"></div>
+          <h3>Atlas Doc Mind</h3>
+          <p class="what">Evidence-first Q&amp;A over one pasted document with citations, confidence, and follow-ups.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Reduces hallucinated “facts” in internal knowledge workflows.</li>
+            <li>Makes answers checkable with short verbatim spans.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Legal/procurement triage, RFC comprehension, finance memos, policy desks.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a1"></div>
+          <h3>Aura Brand Alchemy</h3>
+          <p class="what">Voice samples + deliverable brief → voice DNA, lexicon, on-brand asset in Markdown, rationale JSON.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Scales founder voice without dilution across freelancers.</li>
+            <li>Explains creative choices for stakeholder review.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>B2B SaaS launches, agencies, employer brand, indie maker social.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a3"></div>
+          <h3>Prism Code Sentinel</h3>
+          <p class="what">Security- and correctness-biased review JSON: severities, exploit sketches, tests, refactors.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Compresses “what to look at first” before human or SAST review.</li>
+            <li>Connects findings to concrete tests.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Squads without full-time appsec, OSS triage, pre-audit sweeps.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a4"></div>
+          <h3>Lens Vision Brief</h3>
+          <p class="what">Reference image + creative intent → creative-direction JSON (palette, composition, hooks, don’ts).</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Aligns marketing and design before expensive shoots.</li>
+            <li>Surfaces clichés to avoid early.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Growth teams, agencies, landing experiments, key art exploration.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a4"></div>
+          <h3>Crystal JSON Oracle</h3>
+          <p class="what">Plain-language data intent → JSON Schema draft, examples, migration notes JSON.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Shortens product language → typed contract gap.</li>
+            <li>Seeds fixtures for tests and partner docs.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Events/webhooks, ETL contracts, mobile payloads, B2B onboarding.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a3"></div>
+          <h3>Glyph Regex Whisperer</h3>
+          <p class="what">Natural language + flavor → regex, tests, caveats JSON for safer patterns.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Saves regex rabbit holes for one-off parsers and filters.</li>
+            <li>Flags foot-guns like catastrophic backtracking when relevant.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>SRE log routing, CSV hygiene, editor searches, lightweight validators.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a1"></div>
+          <h3>Arena Dialectic</h3>
+          <p class="what">Two personas debate a tension with steel-manning; JSON includes tradeoffs, path, experiments.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Stress-tests decisions before irreversible spend.</li>
+            <li>Ends with experiments, not vibes.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Architecture reviews, roadmap bets, leadership offsites, RFC prep.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a3"></div>
+          <h3>Lumen Learn Path</h3>
+          <p class="what">Topic + time budget → weekly curriculum JSON with drills, resources, quizzes, anti-patterns.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Realistic adult learning plans—not generic blog outlines.</li>
+            <li>Checkpoints with rubrics keep progress measurable.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Engineering upskilling, career switches, manager growth plans.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a4"></div>
+          <h3>Semantic Bisect</h3>
+          <p class="what">Two texts + optional lens → meaning-level diff: divergences, assumptions, merge playbook, bridge paragraph.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Surfaces silent disagreements before expensive meetings.</li>
+            <li>Produces neutral language both sides can sign.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>PRD vs eng spec, policy versions, partnership redlines, research memos.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a3"></div>
+          <h3>Steel Socratic</h3>
+          <p class="what">Belief or bet → Socratic ladder JSON with cruxes and “how to update your mind” policy.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Improves epistemic hygiene without moralizing.</li>
+            <li>Makes testable cruxes explicit for experiments.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Founders, investors, policy exploration, journaling, research writing.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a1"></div>
+          <h3>Persona Resonance</h3>
+          <p class="what">Persona brief + draft copy → resonance score, drift, rewrites, micro style guide JSON.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Quantifies voice alignment for distributed writers.</li>
+            <li>Extracts do/don’t lists from the brief itself.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Brand, games narrative, support macros, exec ghostwriting QA.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a4"></div>
+          <h3>Plain Bind Clarity</h3>
+          <p class="what">Dense clauses → plain obligations, risks, glossary, checklist JSON—not legal advice.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Speeds first-pass comprehension for business stakeholders.</li>
+            <li>Flags ambiguities to resolve with counsel.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>MSAs/DPAs under counsel oversight, HR handbooks, procurement SLAs.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a2"></div>
+          <h3>Prism Data Story</h3>
+          <p class="what">Metrics/CSV + audience → narrative JSON with chart ideas, anomalies, ethics limits, social snippets.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Aligns data and story without overclaiming from thin slices.</li>
+            <li>Multi-channel copy from one analysis pass.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Board decks, investor updates, growth reviews, impact reporting.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a1"></div>
+          <h3>Arc Code Narrative</h3>
+          <p class="what">Code snippet → systems story JSON: cast, acts, villains, glossary, onboarding reading order.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Accelerates onboarding when READMEs lag reality.</li>
+            <li>Memorable mental model for talks and internal docs.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>New hire ramp, OSS contributor guides, diligence skim, teaching.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a2"></div>
+          <h3>Forge Prompt Atelier</h3>
+          <p class="what">Mission + stack + safety → full prompt kit JSON: templates, few-shots, eval rubric, negatives, ops notes.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Productionizes prompts beyond a single clever string.</li>
+            <li>Supports audits and regression thinking.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>ML platforms, safety review, enterprise capability versioning.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="accent a1"></div>
+          <h3>Echo Voice of Customer</h3>
+          <p class="what">Qualitative feedback blob → themes with quotes, roadmap bets, messaging guardrails JSON.</p>
+          <p class="label">Why it’s useful</p>
+          <ul>
+            <li>Anchors prioritization in evidence, not HIPPO opinion.</li>
+            <li>Bridges PM, marketing, and support on customer language.</li>
+          </ul>
+          <p class="label">Where it’s used</p>
+          <ul>
+            <li>Quarterly planning, UX synthesis, positioning refresh, early PMF.</li>
+          </ul>
+        </article>
+      </div>
+
+      <section class="slides">
+        <h2>LinkedIn / Instagram slide copy</h2>
+        <p class="sub">Duplicate each block into a square (1080×1080) design in Figma or Canva. Hook → bullets → CTA.</p>
+
+        <div class="slide">
+          <h3>Slide 1 — Hook</h3>
+          <p class="hook">Stop shipping the same “Chat with PDF” demo. Neuron is a constellation of 19 sharp tools.</p>
+          <ul>
+            <li>Each tool does one job extremely well.</li>
+            <li>BYOK: your OpenAI key, your cost control.</li>
+            <li>Next.js 16 + Tailwind v4 — deploy anywhere.</li>
+          </ul>
+        </div>
+
+        <div class="slide">
+          <h3>Slide 2 — For builders</h3>
+          <p class="hook">Prompt Forge + Atelier + Regex Whisperer + JSON Oracle = your AI engineering starter pack.</p>
+          <ul>
+            <li>Forge: tighten a single prompt with risk notes.</li>
+            <li>Atelier: ship system prompts + eval rubrics.</li>
+            <li>Glyph &amp; Crystal: tame messy inputs and schemas.</li>
+          </ul>
+        </div>
+
+        <div class="slide">
+          <h3>Slide 3 — For leaders</h3>
+          <p class="hook">Meetings, decisions, and customer truth — without another generic summary bot.</p>
+          <ul>
+            <li>Echo vs Scribe: fast minutes vs board records.</li>
+            <li>Arena Dialectic: stress-test strategy with embodied personas.</li>
+            <li>VoC Echo: themes, roadmap bets, messaging guardrails.</li>
+          </ul>
+        </div>
+
+        <div class="slide">
+          <h3>Slide 4 — CTA</h3>
+          <p class="hook">Clone a repo, npm install, npm run dev, paste your key — ship in minutes.</p>
+          <ul>
+            <li>GitHub: github.com/mahan0227</li>
+            <li>Search repos: neuron-prompt-forge, semantic-bisect, arena-dialectic, …</li>
+            <li>MIT licensed — remix freely with attribution.</li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="export">
+        <strong>How to use this file:</strong> Open in Chrome → full-page screenshot or print to PDF for LinkedIn
+        documents. For Instagram, crop the hero, a single <code>.card</code>, or each <code>.slide</code> to 4:5 or 1:1.
+        The same HTML and the square SVG ship in <strong>every tool repo</strong> under
+        <code>docs/neuron-suite-brochure.html</code> and <code>docs/neuron-suite-ig-square.svg</code>. Each repo’s
+        <code>README.md</code> explains that tool’s <em>what / why / where</em> in depth.
+      </div>
+    </div>
+  </body>
+</html>
