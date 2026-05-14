@@ -7,6 +7,7 @@ export default function Home() {
   const settings = useOpenAISettings();
   const { apiKey, model, setModel } = settings;
   const [imageDataUrl, setImageDataUrl] = useState("");
+  const [imageMime, setImageMime] = useState("image/jpeg");
   const [briefType, setBriefType] = useState("Product hero on gradient glass background");
   const [loading, setLoading] = useState(false);
   const [output, setOutput] = useState("");
@@ -34,7 +35,7 @@ export default function Home() {
       const res = await fetch("/api/vision", {
         method: "POST",
         headers: authHeaders(apiKey),
-        body: JSON.stringify({ imageDataUrl, briefType, model }),
+        body: JSON.stringify({ imageDataUrl, imageMime, briefType, model }),
       });
       const data = await res.json();
       if (!res.ok) {
@@ -79,11 +80,20 @@ export default function Home() {
             />
           </label>
           <label className="block space-y-2 text-sm">
-            <span className="text-zinc-200">Or paste data URL / base64</span>
+            <span className="text-zinc-200">Or paste data URL / raw base64</span>
             <textarea
               value={imageDataUrl}
               onChange={(e) => setImageDataUrl(e.target.value)}
               rows={6}
+              className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 font-mono text-xs outline-none focus:border-sky-400/60"
+            />
+          </label>
+          <label className="block space-y-2 text-sm">
+            <span className="text-zinc-200">MIME for raw base64 only</span>
+            <input
+              value={imageMime}
+              onChange={(e) => setImageMime(e.target.value)}
+              placeholder="image/jpeg"
               className="w-full rounded-xl border border-white/10 bg-black/40 px-3 py-2 font-mono text-xs outline-none focus:border-sky-400/60"
             />
           </label>

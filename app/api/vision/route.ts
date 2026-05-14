@@ -2,12 +2,22 @@ import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
 import { getOpenAIApiKey } from "@/lib/openai-key";
 
-function normalizeDataUrl(input: string): string | null {
+const ALLOWED_IMAGE_MIME = new Set(["image/png", "image/jpeg", "image/jpg", "image/gif", "image/webp"]);
+
+function normalizeDataUrl(input: string, mimeHint?: string): string | null {
   const trimmed = input.trim();
   if (!trimmed) return null;
   if (trimmed.startsWith("data:image")) return trimmed;
   if (/^[A-Za-z0-9+/=\s]+$/.test(trimmed) && trimmed.length > 40) {
-    return `data:image/png;base64,${trimmed.replace(/\s+/g, "")}`;
+    const b64 = trimmed.replace(/\s+/g, "");
+    const hint = mimeHint?.trim().toLowerCase();
+    if (hint) {
+      const normalized = hint === "image/jpg" ? "image/jpeg" : hint;
+      if (ALLOWED_IMAGE_MIME.has(normalized)) {
+        return `data:${normalized};base64,${b64}`;
+      }
+    }
+    return `data:image/png;base64,${b64}`;
   }
   return null;
 }
@@ -21,19 +31,19 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  let body: { imageDataUrl?: string; briefType?: string; model?: string };
+  let body: { imageDataUrl?: string; imageMime?: string; briefType?: string; model?: string };
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ error: "Invalid JSON body." }, { status: 400 });
   }
 
-  const dataUrl = normalizeDataUrl(body.imageDataUrl || "");
+  const dataUrl = normalizeDataUrl(body.imageDataUrl || "", body.imageMime);
   if (!dataUrl) {
     return NextResponse.json(
       {
         error:
-          "Provide `imageDataUrl` as a full data URL (data:image/png;base64,...) or raw base64 for PNG.",
+          "Provide `imageDataUrl` as a full data URL (data:image/...;base64,...) or raw base64. For raw JPEG/WebP base64, set `imageMime` to e.g. image/jpeg.",
       },
       { status: 400 },
     );
