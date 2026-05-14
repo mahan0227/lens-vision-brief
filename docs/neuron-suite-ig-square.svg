@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -15,18 +16,18 @@
   <rect x="48" y="48" width="984" height="984" rx="40" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.5"/>
   <text x="540" y="120" text-anchor="middle" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="26" letter-spacing="0.32em">NEURON SUITE</text>
   <text x="540" y="210" text-anchor="middle" fill="#f8fafc" font-family="ui-serif,Georgia,serif" font-size="56" font-weight="600">19 BYOK tools</text>
-  <text x="540" y="280" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28">What · Why · Where — in every README</text>
-  <text x="540" y="340" text-anchor="middle" fill="#cbd5e1" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24">Next.js 16 · React 19 · Tailwind v4 · OpenAI JSON</text>
+  <text x="540" y="280" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28">What &#183; Why &#183; Where &#8212; in every README</text>
+  <text x="540" y="340" text-anchor="middle" fill="#cbd5e1" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24">Next.js 16 &#183; React 19 &#183; Tailwind v4 &#183; OpenAI JSON</text>
   <rect x="120" y="380" width="840" height="6" rx="3" fill="url(#accent)"/>
   <text x="120" y="450" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Build &amp; ship</text>
-  <text x="120" y="490" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Prompt Forge · Prompt Atelier · Regex Whisperer · JSON Oracle</text>
+  <text x="120" y="490" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Prompt Forge &#183; Prompt Atelier &#183; Regex Whisperer &#183; JSON Oracle</text>
   <text x="120" y="560" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Meetings &amp; decisions</text>
-  <text x="120" y="600" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Echo Minutes · Scribe Board Record · Arena Dialectic</text>
+  <text x="120" y="600" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Echo Minutes &#183; Scribe Board Record &#183; Arena Dialectic</text>
   <text x="120" y="670" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Knowledge &amp; narrative</text>
-  <text x="120" y="710" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Atlas Doc · Arc Code · Semantic Bisect · Steel Socratic</text>
+  <text x="120" y="710" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Atlas Doc &#183; Arc Code &#183; Semantic Bisect &#183; Steel Socratic</text>
   <text x="120" y="780" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Brand, data, voice</text>
-  <text x="120" y="820" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Aura Brand · Lens Vision · Prism Data · Plain Clarity · Prism Code · Persona · VoC Echo</text>
+  <text x="120" y="820" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Aura Brand &#183; Lens Vision &#183; Prism Data &#183; Plain Clarity &#183; Prism Code &#183; Persona &#183; VoC Echo</text>
   <text x="120" y="890" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Learn</text>
-  <text x="120" y="930" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Lumen Learn Path — spaced curriculum &amp; anti-patterns</text>
-  <text x="540" y="1020" text-anchor="middle" fill="#64748b" font-family="ui-monospace,monospace" font-size="20">github.com/mahan0227 · docs/neuron-suite-brochure.html in each repo</text>
+  <text x="120" y="930" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Lumen Learn Path &#8212; spaced curriculum &amp; anti-patterns</text>
+  <text x="540" y="1020" text-anchor="middle" fill="#64748b" font-family="ui-monospace,monospace" font-size="20">github.com/mahan0227 &#183; docs/neuron-suite-brochure.html in each repo</text>
 </svg>
