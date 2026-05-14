@@ -67,6 +67,30 @@
         line-height: 1.65;
         color: rgba(232, 230, 242, 0.88);
       }
+      .about {
+        margin: 48px auto 0;
+        max-width: 820px;
+        padding: 28px 32px 32px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(0, 0, 0, 0.28);
+      }
+      .about h2 {
+        font-family: "Instrument Serif", Georgia, serif;
+        font-weight: 400;
+        font-size: 1.65rem;
+        margin: 0 0 14px;
+        letter-spacing: -0.02em;
+      }
+      .about p {
+        margin: 0 0 12px;
+        font-size: 1rem;
+        line-height: 1.65;
+        color: rgba(232, 230, 242, 0.82);
+      }
+      .about p:last-child {
+        margin-bottom: 0;
+      }
       .pill-row {
         display: flex;
         flex-wrap: wrap;
@@ -216,10 +240,10 @@
         <div class="tag">Neuron suite</div>
         <h1>Nineteen opinionated AI microtools — each its own repo</h1>
         <p class="lead">
-          Next.js 16, React 19, Tailwind v4, OpenAI JSON mode. You bring the API key; nothing is stored on
-          our servers except what you deploy yourself. Each repo is one sharp job—prompts, meetings, docs,
-          code, brand, data, and customer voice—so teams can ship internal AI tools without generic chat
-          wrappers.
+          <strong>Neuron Suite</strong> is nineteen <em>separate</em> Next.js apps (one repo each) for real work:
+          prompts, meetings, grounded docs, code review, brand, data stories, customer voice, learning paths,
+          and more. You bring your OpenAI API key; deploy on your infra. No generic chat wrapper—each tool
+          does one job with structured JSON you can trust in workflows.
         </p>
         <div class="pill-row">
           <span class="pill">BYOK OpenAI</span>
@@ -227,6 +251,29 @@
           <span class="pill">Production build ready</span>
           <span class="pill">GitHub: mahan0227</span>
         </div>
+      </section>
+
+      <section class="about" aria-labelledby="about-heading">
+        <h2 id="about-heading">What is Neuron Suite?</h2>
+        <p>
+          <strong>Neuron Suite</strong> is a <em>family of nineteen small web applications</em>, each in its own
+          repository, built the same way: Next.js&nbsp;16, React&nbsp;19, Tailwind&nbsp;v4, and OpenAI chat
+          completions with JSON-shaped outputs. There is no shared “mega product”—only sharp tools you can
+          deploy, fork, or remix independently.
+        </p>
+        <p>
+          Every app is <strong>BYOK</strong> (bring your own key): users paste an OpenAI API key in the browser;
+          your deployment never needs a platform master key. That keeps cost, privacy, and compliance under
+          <em>your</em> account—ideal for internal operators, agencies, and builders who outgrew generic chat
+          wrappers.
+        </p>
+        <p>
+          Together the suite covers <strong>prompt engineering</strong>, <strong>meetings</strong>,
+          <strong>grounded documents</strong>, <strong>code &amp; security review</strong>,
+          <strong>brand &amp; voice</strong>, <strong>data storytelling</strong>, <strong>customer voice</strong>,
+          <strong>learning paths</strong>, and more—each tool documented with <em>what it is</em>,
+          <em>why it is useful</em>, and <em>where teams use it</em> in its README.
+        </p>
       </section>
 
       <h2>Tool grid</h2>
@@ -552,10 +599,12 @@
 
       <div class="export">
         <strong>How to use this file:</strong> Open in Chrome → full-page screenshot or print to PDF for LinkedIn
-        documents. For Instagram, crop the hero, a single <code>.card</code>, or each <code>.slide</code> to 4:5 or 1:1.
-        The same HTML and the square SVG ship in <strong>every tool repo</strong> under
-        <code>docs/neuron-suite-brochure.html</code> and <code>docs/neuron-suite-ig-square.svg</code>. Each repo’s
-        <code>README.md</code> explains that tool’s <em>what / why / where</em> in depth.
+        documents. For Instagram, crop the hero, the <strong>What is Neuron Suite?</strong> block, a single
+        <code>.card</code>, or each <code>.slide</code> to 4:5 or 1:1. The same HTML and the square SVG ship in
+        <strong>every tool repo</strong> under <code>docs/neuron-suite-brochure.html</code> and
+        <code>docs/neuron-suite-ig-square.svg</code>. Canonical updates live in
+        <a href="https://github.com/mahan0227/neuron-suite-promo" style="color:#93c5fd">github.com/mahan0227/neuron-suite-promo</a>.
+        Each app’s <code>README.md</code> explains that tool’s <em>what / why / where</em> in depth.
       </div>
     </div>
   </body>

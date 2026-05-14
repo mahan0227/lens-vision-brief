@@ -14,20 +14,23 @@
   </defs>
   <rect width="1080" height="1080" fill="url(#bg)"/>
   <rect x="48" y="48" width="984" height="984" rx="40" fill="none" stroke="url(#accent)" stroke-width="3" opacity="0.5"/>
-  <text x="540" y="120" text-anchor="middle" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="26" letter-spacing="0.32em">NEURON SUITE</text>
-  <text x="540" y="210" text-anchor="middle" fill="#f8fafc" font-family="ui-serif,Georgia,serif" font-size="56" font-weight="600">19 BYOK tools</text>
-  <text x="540" y="280" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="28">What &#183; Why &#183; Where &#8212; in every README</text>
-  <text x="540" y="340" text-anchor="middle" fill="#cbd5e1" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24">Next.js 16 &#183; React 19 &#183; Tailwind v4 &#183; OpenAI JSON</text>
-  <rect x="120" y="380" width="840" height="6" rx="3" fill="url(#accent)"/>
-  <text x="120" y="450" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Build &amp; ship</text>
-  <text x="120" y="490" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Prompt Forge &#183; Prompt Atelier &#183; Regex Whisperer &#183; JSON Oracle</text>
-  <text x="120" y="560" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Meetings &amp; decisions</text>
-  <text x="120" y="600" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Echo Minutes &#183; Scribe Board Record &#183; Arena Dialectic</text>
-  <text x="120" y="670" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Knowledge &amp; narrative</text>
-  <text x="120" y="710" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Atlas Doc &#183; Arc Code &#183; Semantic Bisect &#183; Steel Socratic</text>
-  <text x="120" y="780" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Brand, data, voice</text>
-  <text x="120" y="820" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Aura Brand &#183; Lens Vision &#183; Prism Data &#183; Plain Clarity &#183; Prism Code &#183; Persona &#183; VoC Echo</text>
-  <text x="120" y="890" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="22" font-weight="600">Learn</text>
-  <text x="120" y="930" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20">Lumen Learn Path &#8212; spaced curriculum &amp; anti-patterns</text>
-  <text x="540" y="1020" text-anchor="middle" fill="#64748b" font-family="ui-monospace,monospace" font-size="20">github.com/mahan0227 &#183; docs/neuron-suite-brochure.html in each repo</text>
+  <text x="540" y="92" text-anchor="middle" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" letter-spacing="0.32em">NEURON SUITE</text>
+  <text x="540" y="122" text-anchor="middle" fill="#a5b4fc" font-family="ui-sans-serif,system-ui,sans-serif" font-size="17">19 small web apps&#8212;one repo each&#8212;not one mega chatbot</text>
+  <text x="540" y="148" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16">BYOK OpenAI &#183; Next.js 16 &#183; you deploy &#183; your keys stay in the browser</text>
+  <text x="540" y="174" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="16">Prompts meetings docs code brand data learning &amp; customer voice</text>
+  <text x="540" y="228" text-anchor="middle" fill="#f8fafc" font-family="ui-serif,Georgia,serif" font-size="48" font-weight="600">19 BYOK tools</text>
+  <text x="540" y="288" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24">What &#183; Why &#183; Where &#8212; in every README</text>
+  <text x="540" y="328" text-anchor="middle" fill="#cbd5e1" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21">Next.js 16 &#183; React 19 &#183; Tailwind v4 &#183; OpenAI JSON</text>
+  <rect x="120" y="358" width="840" height="6" rx="3" fill="url(#accent)"/>
+  <text x="120" y="418" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="600">Build &amp; ship</text>
+  <text x="120" y="452" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18">Prompt Forge &#183; Prompt Atelier &#183; Regex Whisperer &#183; JSON Oracle</text>
+  <text x="120" y="512" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="600">Meetings &amp; decisions</text>
+  <text x="120" y="546" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18">Echo Minutes &#183; Scribe Board Record &#183; Arena Dialectic</text>
+  <text x="120" y="606" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="600">Knowledge &amp; narrative</text>
+  <text x="120" y="640" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18">Atlas Doc &#183; Arc Code &#183; Semantic Bisect &#183; Steel Socratic</text>
+  <text x="120" y="700" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="600">Brand, data, voice</text>
+  <text x="120" y="734" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18">Aura Brand &#183; Lens Vision &#183; Prism Data &#183; Plain Clarity &#183; Prism Code &#183; Persona &#183; VoC Echo</text>
+  <text x="120" y="794" fill="#e2e8f0" font-family="ui-sans-serif,system-ui,sans-serif" font-size="21" font-weight="600">Learn</text>
+  <text x="120" y="828" fill="#94a3b8" font-family="ui-sans-serif,system-ui,sans-serif" font-size="18">Lumen Learn Path &#8212; spaced curriculum &amp; anti-patterns</text>
+  <text x="540" y="920" text-anchor="middle" fill="#64748b" font-family="ui-monospace,monospace" font-size="18">github.com/mahan0227/neuron-suite-promo &#183; brochure in each repo docs/</text>
 </svg>
